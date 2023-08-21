@@ -67,12 +67,10 @@ NSMutableArray *ratesArray;
     
     RatesTableViewCell * ratesCell = (RatesTableViewCell *) cell;
     
-    [[ratesCell title] setText:@"SomeTest"];
-    [ratesCell currency].text = [ratesArray[indexPath.row] currency];
-    [[ratesCell currency] setText: [ratesArray[indexPath.row] currency]];
+    ratesCell.title.text = [ratesArray[indexPath.row] title];
     ratesCell.currency.text = [ratesArray[indexPath.row] currency];
-    
     ratesCell.currencyValue.text = [ratesArray[indexPath.row] currencyValue];
+    
  
     return cell;
 }
